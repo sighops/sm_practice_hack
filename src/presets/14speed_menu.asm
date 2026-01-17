@@ -8,7 +8,7 @@ PresetsMenu14speed:
     dw #presets_goto_14speed_maridia
     dw #presets_goto_14speed_tourian
     dw #$0000
-    %cm_header("PRESETS FOR 14% SPEED")
+    %cm_header("14% SPEED")
 
 presets_goto_14speed_crateria:
     %cm_submenu("Crateria", #presets_submenu_14speed_crateria)

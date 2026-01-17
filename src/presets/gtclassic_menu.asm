@@ -9,7 +9,7 @@ PresetsMenuGtclassic:
     dw #presets_goto_gtclassic_wrecked_ship
     dw #presets_goto_gtclassic_tourian
     dw #$0000
-    %cm_header("PRESETS FOR GT CLASSIC")
+    %cm_header("GT CLASSIC")
 
 presets_goto_gtclassic_crateria:
     %cm_submenu("Crateria", #presets_submenu_gtclassic_crateria)

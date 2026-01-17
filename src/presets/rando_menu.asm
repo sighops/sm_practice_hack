@@ -12,7 +12,7 @@ PresetsMenuRando:
     dw #presets_goto_rando_wrecked_ship
     dw #presets_goto_rando_tourian
     dw #$0000
-    %cm_header("PRESETS FOR RANDOMIZERS")
+    %cm_header("RANDOMIZERS")
 
 presets_goto_rando_crateria:
     %cm_submenu("Crateria", #presets_submenu_rando_crateria)

@@ -600,7 +600,7 @@ cm_brb_scroll_BG3:
   .incH
     INC : STA !ram_cm_brb_scroll_H
     BRA .applyScrolls
-    
+
   .dec3FF
     LDA #$03FF : STA !ram_cm_brb_scroll_X
 
@@ -631,9 +631,9 @@ cm_brb_scroll_BG3:
 
 table ../resources/header.tbl
 BRB_common_line1:
-    db #$28, "       The Streamer", #$FF
+    db #$28, "       Shit's Fucked", #$FF
 BRB_common_line2:
-    db #$28, "    Will Be Right Back", #$FF
+    db #$28, "      Please Stand By", #$FF
 
 
 BRB_splash_title:

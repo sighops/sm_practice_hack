@@ -16,7 +16,7 @@ PresetsMenuSuitless:
     dw #presets_goto_suitless_final_cleanup
     dw #presets_goto_suitless_tourian
     dw #$0000
-    %cm_header("PRESETS FOR SUITLESS")
+    %cm_header("SUITLESS")
 
 presets_goto_suitless_bombs:
     %cm_submenu("Bombs", #presets_submenu_suitless_bombs)

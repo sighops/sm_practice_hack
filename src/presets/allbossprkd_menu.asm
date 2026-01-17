@@ -9,7 +9,7 @@ PresetsMenuAllbossprkd:
     dw #presets_goto_allbossprkd_maridia
     dw #presets_goto_allbossprkd_tourian
     dw #$0000
-    %cm_header("PRESETS FOR ALL BOSS PRKD")
+    %cm_header("ALL BOSS PRKD")
 
 presets_goto_allbossprkd_crateria:
     %cm_submenu("Crateria", #presets_submenu_allbossprkd_crateria)

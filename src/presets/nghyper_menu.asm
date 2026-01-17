@@ -9,7 +9,7 @@ PresetsMenuNghyper:
     dw #presets_goto_nghyper_crateria
     dw #presets_goto_nghyper_tourian
     dw #$0000
-    %cm_header("PRESETS FOR NG+ HYPER")
+    %cm_header("NG+ HYPER")
 
 presets_goto_nghyper_ceres_station:
     %cm_submenu("Ceres Station", #presets_submenu_nghyper_ceres_station)

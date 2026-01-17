@@ -12,7 +12,7 @@ PresetsMenuKpdr20:
     dw #presets_goto_kpdr20_backtracking
     dw #presets_goto_kpdr20_tourian
     dw #$0000
-    %cm_header("PRESETS FOR 20% KPDR")
+    %cm_header("20% KPDR")
 
 presets_goto_kpdr20_crateria:
     %cm_submenu("Crateria", #presets_submenu_kpdr20_crateria)

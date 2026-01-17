@@ -13,7 +13,7 @@ PresetsMenuNoDropsKpdr:
     dw #presets_goto_nodropskpdr_backtracking
     dw #presets_goto_nodropskpdr_tourian
     dw #$0000
-    %cm_header("PRESETS FOR NO DROPS KPDR")
+    %cm_header("NO DROPS KPDR")
 
 presets_goto_nodropskpdr_early_crateria:
     %cm_submenu("Early Crateria", #presets_submenu_nodropskpdr_early_crateria)

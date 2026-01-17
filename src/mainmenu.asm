@@ -339,16 +339,16 @@ preset_category_banks:
 ; From here, submenus can branch off into any bank
 
 MainMenu:
-    dw #mm_goto_equipment
     dw #mm_goto_presets
-    dw #mm_goto_presets_menu
-    dw #mm_goto_teleport
-    dw #mm_goto_events
-    dw #mm_goto_misc
-if !FEATURE_VANILLAHUD
+    if !FEATURE_VANILLAHUD
 else
     dw #mm_goto_infohud
 endif
+    dw #mm_goto_misc
+    dw #mm_goto_equipment
+    dw #mm_goto_presets_menu
+    dw #mm_goto_teleport
+    dw #mm_goto_events
     dw #mm_goto_sprites
     dw #mm_goto_layout
     dw #mm_goto_gamemenu
@@ -359,8 +359,8 @@ endif
     dw #mm_goto_timecontrol
     dw #mm_goto_ctrlshortcut
     dw #mm_goto_audiomenu
-    dw #mm_goto_customize
     dw #mm_goto_cropmenu
+    dw #mm_goto_customize
     dw #mm_goto_brbmenu
     dw #$0000
     %cm_version_header("SM PRACTICE HACK")
@@ -376,16 +376,16 @@ endif
 
 MainMenuBanks:
     ; this list must match the main menu order
-    dw #EquipmentMenu>>16
     dw #preset_category_banks>>16 ; dummy
-    dw #PresetOptionsMenu>>16
-    dw #TeleportMenu>>16
-    dw #EventFlagsMenu>>16
-    dw #MiscMenu>>16
-if !FEATURE_VANILLAHUD
+    if !FEATURE_VANILLAHUD
 else
     dw #InfoHudMenu>>16
 endif
+    dw #MiscMenu>>16
+    dw #EquipmentMenu>>16
+    dw #PresetOptionsMenu>>16
+    dw #TeleportMenu>>16
+    dw #EventFlagsMenu>>16
     dw #SpritesMenu>>16
     dw #LayoutMenu>>16
     dw #GameMenu>>16
@@ -396,21 +396,21 @@ endif
     dw #SlowdownMenu>>16
     dw #CtrlShortcutMenu>>16
     dw #AudioMenu>>16
-    dw #CustomizeMenu>>16
     dw #CaptureCroppingMenu>>16
+    dw #CustomizeMenu>>16
     dw #BRBMenu>>16
 
 mm_goto_equipment:
     %cm_jsl("Equipment", #action_equipment_mainmenu, #EquipmentMenu)
 
 mm_goto_presets:
-    %cm_jsl("Category Presets", #action_presets_mainmenu, #$0000)
+    %cm_jsl("Go to Category Checkpoint", #action_presets_mainmenu, #$0000)
 
 mm_goto_presets_menu:
-    %cm_jsl("Preset Options", #action_preset_options_mainmenu, #PresetOptionsMenu)
+    %cm_jsl("Category Presets", #action_preset_options_mainmenu, #PresetOptionsMenu)
 
 mm_goto_teleport:
-    %cm_mainmenu("Save Stations", #TeleportMenu)
+    %cm_mainmenu("Go to Save Station", #TeleportMenu)
 
 mm_goto_events:
     %cm_mainmenu("Event Flags", #EventFlagsMenu)
@@ -497,7 +497,7 @@ if !RAW_TILE_GRAPHICS
 endif
 
 presets_select_preset_category:
-    %cm_submenu("Select Preset Category", #SelectPresetCategoryMenu)
+    %cm_submenu("Select a Category Preset", #SelectPresetCategoryMenu)
 
 presets_custom_preset_slot:
     %cm_numfield("Custom Preset Slot", !sram_custom_preset_slot, 0, !TOTAL_PRESET_SLOTS, 1, 2, #.routine)

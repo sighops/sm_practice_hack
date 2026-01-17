@@ -11,7 +11,7 @@ PresetsMenuPrkd20:
     dw #presets_goto_prkd20_backtracking
     dw #presets_goto_prkd20_tourian
     dw #$0000
-    %cm_header("PRESETS FOR 20% PRKD")
+    %cm_header("20% PRKD")
 
 presets_goto_prkd20_crateria:
     %cm_submenu("Crateria", #presets_submenu_prkd20_crateria)

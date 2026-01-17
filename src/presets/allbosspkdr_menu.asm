@@ -10,7 +10,7 @@ PresetsMenuAllbosspkdr:
     dw #presets_goto_allbosspkdr_spore_spawn
     dw #presets_goto_allbosspkdr_tourian
     dw #$0000
-    %cm_header("PRESETS FOR ALL BOSS PKDR")
+    %cm_header("ALL BOSS PKDR")
 
 presets_goto_allbosspkdr_crateria:
     %cm_submenu("Crateria", #presets_submenu_allbosspkdr_crateria)

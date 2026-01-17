@@ -7,7 +7,7 @@ PresetsMenuNintendopower:
     dw #presets_goto_nintendopower_norfair
     dw #presets_goto_nintendopower_tourian
     dw #$0000
-    %cm_header("PRESETS FOR NINTENDO POWER")
+    %cm_header("NINTENDO POWER")
 
 presets_goto_nintendopower_crateria:
     %cm_submenu("Crateria", #presets_submenu_nintendopower_crateria)

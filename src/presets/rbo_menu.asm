@@ -18,7 +18,7 @@ PresetsMenuRbo:
     dw #presets_goto_rbo_kraidg4
     dw #presets_goto_rbo_tourian
     dw #$0000
-    %cm_header("PRESETS FOR RBO")
+    %cm_header("RBO")
 
 presets_goto_rbo_bombs:
     %cm_submenu("Bombs", #presets_submenu_rbo_bombs)

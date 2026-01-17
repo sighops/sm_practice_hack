@@ -14,7 +14,7 @@ PresetsMenuKpdr22:
     dw #presets_goto_kpdr22_backtracking
     dw #presets_goto_kpdr22_tourian
     dw #$0000
-    %cm_header("PRESETS FOR 4 TANK KPDR")
+    %cm_header("4 TANK KPDR")
 
 presets_goto_kpdr22_crateria:
     %cm_submenu("Crateria", #presets_submenu_kpdr22_crateria)
