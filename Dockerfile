@@ -33,7 +33,7 @@ ARG now
 
 WORKDIR /app
 RUN rm -rf build
-RUN mkdir -p build
+RUN mkdir -p build/rom
 RUN rm -rf enemies
 COPY enemies/ enemies/
 RUN rm -rf layout
@@ -49,6 +49,7 @@ RUN ./build_presets.sh
 RUN ./build_dev.sh
 RUN ./build_PAL.sh
 RUN ./build.sh
+RUN ./patch.sh
 
 FROM scratch AS export-stage
 COPY --from=build-stage /app/build .
