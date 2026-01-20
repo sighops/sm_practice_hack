@@ -340,7 +340,6 @@ preset_category_banks:
 
 MainMenu:
     dw #mm_goto_presets
-    dw #$FFFF
     if !FEATURE_VANILLAHUD
 else
     dw #mm_goto_infohud
@@ -348,6 +347,7 @@ endif
     dw #mm_goto_misc
     dw #mm_goto_equipment
     dw #mm_goto_presets_menu
+    dw #$FFFF
     dw #mm_goto_teleport
     dw #mm_goto_events
     dw #mm_goto_sprites
@@ -360,6 +360,7 @@ endif
     dw #mm_goto_timecontrol
     dw #mm_goto_ctrlshortcut
     dw #mm_goto_audiomenu
+    dw #$FFFF
     dw #mm_goto_cropmenu
     dw #mm_goto_customize
     dw #mm_goto_brbmenu
@@ -385,6 +386,7 @@ endif
     dw #MiscMenu>>16
     dw #EquipmentMenu>>16
     dw #PresetOptionsMenu>>16
+    dw #$FFFF
     dw #TeleportMenu>>16
     dw #EventFlagsMenu>>16
     dw #SpritesMenu>>16
@@ -397,6 +399,7 @@ endif
     dw #SlowdownMenu>>16
     dw #CtrlShortcutMenu>>16
     dw #AudioMenu>>16
+    dw #$FFFF
     dw #CaptureCroppingMenu>>16
     dw #CustomizeMenu>>16
     dw #BRBMenu>>16
@@ -405,7 +408,7 @@ mm_goto_equipment:
     %cm_jsl("Equipment", #action_equipment_mainmenu, #EquipmentMenu)
 
 mm_goto_presets:
-    %cm_jsl("Go to Category Checkpoint", #action_presets_mainmenu, #$0000)
+    %cm_jsl("Go to Checkpoint", #action_presets_mainmenu, #$0000)
 
 mm_goto_presets_menu:
     %cm_jsl("Category Presets", #action_preset_options_mainmenu, #PresetOptionsMenu)

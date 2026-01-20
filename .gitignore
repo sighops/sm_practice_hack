@@ -6,6 +6,8 @@ build/
 tools/*.exe
 tools/asar*
 tools/dll/*
+tools/*.tar
+tools/*.gz
 .vscode/launch.json
 .vscode/tasks.json
 /names/custom_names.txt
