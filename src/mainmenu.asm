@@ -340,6 +340,7 @@ preset_category_banks:
 
 MainMenu:
     dw #mm_goto_presets
+    dw #$FFFF
     if !FEATURE_VANILLAHUD
 else
     dw #mm_goto_infohud

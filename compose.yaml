@@ -1,0 +1,6 @@
+services:
+  sm_practice_hack:
+    build:
+      context: .
+    volumes:
+      - ./:/app
